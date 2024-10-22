@@ -7,5 +7,4 @@ An authentication API using JSON-Web Tokens that handles login, registration, an
      - Generate access tokens (short-lived) and refresh tokens (long-lived).
      - Securely store refresh tokens and demonstrate token refreshing for seamless user sessions.
 
-**
-Goal**: Learn how to handle token expiration and refreshing efficiently in a mobile context.
+**Goal**: Learn how to handle token expiration and refreshing efficiently in a mobile context.
