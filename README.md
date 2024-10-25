@@ -8,3 +8,14 @@ An authentication API using JSON-Web Tokens that handles login, registration, an
      - Securely store refresh tokens and demonstrate token refreshing for seamless user sessions.
 
 **Goal**: Learn how to handle token expiration and refreshing efficiently in a mobile context.
+
+**Dev-Dependency**:
+- Bcryptjs
+- JSON-Web Token
+- Cors
+- dotenv
+- mongoose
+- morgan
+- nodemon
+- express-validator
+- express

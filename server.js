@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 const port = process.env.PORT || 4000
-const mongo_url = process.env.MONGoDB_URL 
+const mongo_url = process.env.MONGODB_URL 
 
 app.use(express.json());
 
@@ -13,4 +13,7 @@ mongoose.connect(mongo_url).then(() => app.listen(port, () => {
     console.log("MongoDB connected"); 
     console.log(`Server started at ${port}`);
 }))
+.catch((error) => {
+    console.error('Error connecting to MongoDB:', error.message);
+});
 
