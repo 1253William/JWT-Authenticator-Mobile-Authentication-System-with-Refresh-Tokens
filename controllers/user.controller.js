@@ -21,10 +21,12 @@ exports.register = async(req, res)=>{
         const savedUser = await user.save();
         return res.status(201).json(savedUser);
 
-    } catch(error){
-        return res.status(500).json({message: error.message});
-    }
-}
+        } catch(error){
+            return res.status(500).json({message: error.message});
+        }
+    } 
+  
+
 
 /// Controller for Logging in an existing user
 ///POST /api/v1/auth/login
