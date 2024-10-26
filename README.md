@@ -4,6 +4,7 @@ An authentication API using JSON-Web Tokens that handles login, registration, an
  
 **Features**:
      - Registration and Login  endpoints.
+     - Password reset endpoint.
      - Generate access tokens (short-lived) and refresh tokens (long-lived).
      - Securely store refresh tokens and demonstrate token refreshing for seamless user sessions.
 

@@ -12,5 +12,11 @@ router.post('/register');
 router.post('/login');
 
 
+// @route POST /api/v1/auth/resetpassword 
+// @description Reset password
+// @access Private
+router.post('/resetpassword');
+
+
 
 module.exports = router;
