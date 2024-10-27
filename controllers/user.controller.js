@@ -12,6 +12,7 @@ exports.register = async(req, res)=>{
         if(existingUser){
             return res.status(400).json({message: "User already exists"});
         }
+        const salt = await bcrypt.genSalt(10); 
         const hashedPassword = await bcrypt.hash(password, salt);
         const user = new User({
             name, 
@@ -19,7 +20,9 @@ exports.register = async(req, res)=>{
             password: hashedPassword
         })
         const savedUser = await user.save();
-        return res.status(201).json(savedUser);
+        return res.status(201).json({
+            message: "User registered successfully",
+            savedUser});
 
         } catch(error){
             return res.status(500).json({message: error.message});
