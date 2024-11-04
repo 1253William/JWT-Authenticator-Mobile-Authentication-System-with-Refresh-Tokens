@@ -1,5 +1,5 @@
 # JWT-Authenticator-Mobile-Authentication-System-with-Refresh-Tokens
-An authentication API using JSON-Web Tokens that handles login, registration, and token-based sessions using JWT for a mobile app.
+An authentication API using JSON-Web Tokens that handles login, registration, password-reset, and token-based sessions using JWT for a mobile app.
 
  
 **Features**:
@@ -10,7 +10,7 @@ An authentication API using JSON-Web Tokens that handles login, registration, an
 
 **Goal**: Learn how to handle token expiration and refreshing efficiently in a mobile context.
 
-**Dev-Dependency**:
+**Dev-Dependencies**:
 - Bcryptjs
 - JSON-Web Token
 - Cors
@@ -19,4 +19,4 @@ An authentication API using JSON-Web Tokens that handles login, registration, an
 - morgan
 - nodemon
 - express-validator
-- express
+- Express-js

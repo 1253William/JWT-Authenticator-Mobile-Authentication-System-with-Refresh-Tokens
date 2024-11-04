@@ -12,21 +12,20 @@ const mongo_url = process.env.MONGODB_URL
 app.use(express.json());
 app.use(cors())
 
+
 const allowedOrigins = ["http://localhost:8080"];
 
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, origin); // Reflect the origin in the Access-Control-Allow-Origin header
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+app.use( cors({
+        origin: (origin, callback) => {
+          if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, origin); // Reflect the origin in the Access-Control-Allow-Origin header
+          } else {
+            callback(new Error("Not allowed by CORS"));
+          }
+        },
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        allowedHeaders: ["Content-Type", "Authorization"],
+      }))
 
 // Auth Endpoints
 app.use('/api/v1/auth', authRoutes )
