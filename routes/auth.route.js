@@ -10,7 +10,7 @@ router.post('/register', register);
 // @route POST /api/v1/auth/login
 // @description Login an existing user
 // @access      Public
-router.post('/login');
+router.post('/login', login);
 
 
 // @route POST /api/v1/auth/resetpassword 
