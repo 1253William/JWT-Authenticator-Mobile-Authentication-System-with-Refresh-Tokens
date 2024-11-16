@@ -13,10 +13,10 @@ router.post('/register', register);
 router.post('/login', login);
 
 
-// @route POST /api/v1/auth/resetpassword 
+// @route PUT /api/v1/auth/resetpassword 
 // @description Reset password
 // @access Private
-router.post('/resetpassword');
+router.put('/resetpassword', resetPassword);
 
 
 

@@ -65,7 +65,9 @@ exports.login = async(req, res) => {
 
         //Generate JWT token
         //We first create the access token and then a refresh token
-        const accessToken = jwt.sign({userId:existingUser._id}, process.env.JWT_SECRET_KEY, {expiresIn: '1h'});
+        const accessToken = jwt.sign({userId:existingUser._id}, process.env.JWT_SECRET_KEY, {subject: 'accessToken', expiresIn: '1h'});
+
+        const refreshToken = jwt.sign({userId: existingUser._id}, process.env.JWT_REFRESH_TOKEN,{subject:'refreshToken', expiresIn: '1w'});
 
         return res.status(200).json({
             message: "User logged in successfully",
